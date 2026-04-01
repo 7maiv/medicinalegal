@@ -644,8 +644,12 @@ function showResult() {
 
   const musica = document.getElementById("musica");
 
-  musica.play().catch(() => {
-    console.log("Autoplay bloqueado");
+  musica.currentTime = 0;
+
+  musica.play().then(() => {
+    console.log("Tocando 🎵");
+  }).catch((erro) => {
+    console.log("Autoplay bloqueado:", erro);
   });
 }
 
