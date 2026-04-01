@@ -487,6 +487,16 @@
           </div>
         </div>
 
+        <!-- BOTÃO AQUI -->
+    <div style="margin-top:20px; text-align:center;">
+      <button onclick="startMusic()">
+        🔊 Ouvir resultado
+      </button>
+    </div>
+
+  </div>
+</div>
+
         <div class="r-section-label">O que é a DIP?</div>
         <div class="info-block">
           A Doença Inflamatória Pélvica é uma infecção dos órgãos reprodutores femininos — útero, trompas de Falópio e ovários. É geralmente causada por bactérias sexualmente transmissíveis como <em>Neisseria gonorrhoeae</em> e <em>Chlamydia trachomatis</em>. O diagnóstico e tratamento precoces são fundamentais para evitar complicações como infertilidade.
@@ -658,6 +668,12 @@ function restart() {
   ans = new Array(Qs.length).fill(null);
   sw('s-start');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startMusic() {
+  const musica = document.getElementById("musica");
+  musica.currentTime = 0;
+  musica.play();
 }
 </script>
 </body>
